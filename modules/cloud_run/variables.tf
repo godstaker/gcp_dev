@@ -15,3 +15,8 @@ variable "region" {
   type        = string
   default     = "europe-west2"
 }
+
+variable "members" {
+  description = "A list of members (identities) to grant the role"
+  type        = string
+}

@@ -34,10 +34,13 @@ resource "google_cloud_run_service" "cloud_run" {
   depends_on = [google_project_service.run_api]
 }
 
-resource "google_cloud_run_service_iam_member" "public-access" {
+resource "google_cloud_run_service_iam_member" "binding" {
   location = google_cloud_run_service.cloud_run.location
   project  = google_cloud_run_service.cloud_run.project
   service  = google_cloud_run_service.cloud_run.name
   role     = "roles/run.invoker"
-  member   = "allUsers"
+  member   = var.members
+
+  depends_on = [ google_cloud_run_service.cloud_run ]
 }
+
