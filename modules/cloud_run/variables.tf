@@ -7,6 +7,7 @@ variable "service_name" {
 variable "image" {
   description = "Docker image to deploy on Cloud Run"
   type        = string
+  default     = "gcr.io/google-samples/hello-app:1.0"
 }
 
 variable "region" {
