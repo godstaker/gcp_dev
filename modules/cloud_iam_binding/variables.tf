@@ -5,5 +5,5 @@ variable "service_account_email" {
 
 variable "cloud_run_service_name" {
   description = "Name of the Cloud Run service to grant permissions for"
-  type        = list(string)
+  type        = string
 }
