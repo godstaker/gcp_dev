@@ -1,6 +1,6 @@
 provider "google" {
-  project = "av24042017"
-  region  = "europe-west2"
+  project = "project_id"
+  region  = "region"
 }
 
 # Your resources and configurations here
