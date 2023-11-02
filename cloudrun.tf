@@ -1,11 +1,13 @@
+/*
 module "cloud_run_serviceaccount" {
   source               = "./modules/service_acc"
   service_account_name = "cloudrun"
-  roles                = ["roles/compute.viewer"]
+  roles                = ["roles/run.invoker"]
 }
 
 module "hello_world" {
   source       = "./modules/cloud_run"
   service_name = "helloworld"
-  members      = "serviceAccount:cloudrun@av2404project_id2017.iam.gserviceaccount.com"
+  members      = "serviceAccount:cloudrun@project_id.iam.gserviceaccount.com"
 }
+*/
