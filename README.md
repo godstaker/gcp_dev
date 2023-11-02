@@ -9,3 +9,7 @@ chmod +x cred_init.sh
 Run the cred_init.sh file
 
 Run terraform init --> plan --> apply
+
+Outstanding tasks:
+Global Load Balancer
+Dynamic setup to deploy to a list of projects
